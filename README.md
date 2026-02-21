@@ -63,6 +63,14 @@ Evidence includes:
 
 ---
 
+## Lifecycle
+
+✅ Validated remote state + locking  
+✅ Workload resources destroyed (cost control)  
+✅ Backend resources destroyed after evidence capture
+
+---
+
 ## Status
 
 **v1.1 — Remote Terraform State (Azure Backend)**  
