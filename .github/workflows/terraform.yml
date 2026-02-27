@@ -2,25 +2,31 @@ name: terraform-oidc
 
 on:
   push:
-    branches: [ "main" ]
-  workflow_dispatch: {}
+    branches: ["main"]
+  workflow_dispatch:
 
 permissions:
   id-token: write
   contents: read
 
 env:
-  TF_WORKING_DIR: infra/workload/01-local-state
-
-  # Terraform AzureRM Provider / Backend via OIDC
-  ARM_USE_OIDC: true
-  ARM_CLIENT_ID: ${{ vars.AZURE_CLIENT_ID }}
-  ARM_TENANT_ID: ${{ vars.AZURE_TENANT_ID }}
-  ARM_SUBSCRIPTION_ID: ${{ vars.AZURE_SUBSCRIPTION_ID }}
+  TF_IN_AUTOMATION: true
+  TF_INPUT: false
 
 jobs:
   plan:
+    name: plan
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: infra/workload/01-local-state
+        shell: bash
+    env:
+      ARM_USE_OIDC: true
+      ARM_CLIENT_ID: ${{ vars.AZURE_CLIENT_ID }}
+      ARM_TENANT_ID: ${{ vars.AZURE_TENANT_ID }}
+      ARM_SUBSCRIPTION_ID: ${{ vars.AZURE_SUBSCRIPTION_ID }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -37,22 +43,34 @@ jobs:
         with:
           terraform_version: 1.14.2
 
-      - name: Terraform Init
-        working-directory: ${{ env.TF_WORKING_DIR }}
-        run: terraform init
+      - name: Terraform fmt (check)
+        run: terraform fmt -check -recursive
 
-      - name: Terraform Validate
-        working-directory: ${{ env.TF_WORKING_DIR }}
+      - name: Terraform init
+        run: terraform init -input=false
+
+      - name: Terraform validate
         run: terraform validate
 
-      - name: Terraform Plan
-        working-directory: ${{ env.TF_WORKING_DIR }}
-        run: terraform plan -lock-timeout=0s
+      - name: Terraform plan
+        run: terraform plan -input=false -no-color
 
   apply:
-    needs: plan
+    name: apply
     runs-on: ubuntu-latest
+    needs: plan
     if: github.event_name == 'workflow_dispatch'
+    environment: apply
+    defaults:
+      run:
+        working-directory: infra/workload/01-local-state
+        shell: bash
+    env:
+      ARM_USE_OIDC: true
+      ARM_CLIENT_ID: ${{ vars.AZURE_CLIENT_ID }}
+      ARM_TENANT_ID: ${{ vars.AZURE_TENANT_ID }}
+      ARM_SUBSCRIPTION_ID: ${{ vars.AZURE_SUBSCRIPTION_ID }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -69,10 +87,8 @@ jobs:
         with:
           terraform_version: 1.14.2
 
-      - name: Terraform Init
-        working-directory: ${{ env.TF_WORKING_DIR }}
-        run: terraform init
+      - name: Terraform init
+        run: terraform init -input=false
 
-      - name: Terraform Apply
-        working-directory: ${{ env.TF_WORKING_DIR }}
-        run: terraform apply -auto-approve -lock-timeout=0s
+      - name: Terraform apply
+        run: terraform apply -auto-approve -input=false -no-color
