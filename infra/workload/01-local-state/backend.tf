@@ -5,6 +5,6 @@ terraform {
     container_name       = "tfstate"
     key                  = "runbook.tfstate"
 
-    use_azuread_auth     = true
+    use_azuread_auth = true
   }
 }
