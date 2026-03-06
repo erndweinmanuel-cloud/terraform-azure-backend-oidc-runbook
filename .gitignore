@@ -6,3 +6,5 @@ crash.*.log
 
 terraform.tfvars
 *.auto.tfvars
+
+federated-credential.json
