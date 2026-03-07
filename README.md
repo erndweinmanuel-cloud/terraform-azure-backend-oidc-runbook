@@ -66,12 +66,16 @@ This module adds secretless authentication from GitHub Actions to Azure using Op
 
 Runbook steps:
 
-1. [01 — App Registration and Federation](runbook/module-02-ci-cd-oidc/01-app-registration-and-federation.md)
-2. [02 — RBAC Minimal Scope](runbook/module-02-ci-cd-oidc/02-rbac-minimal-scope.md)
-3. [03 — GitHub Actions Variables](runbook/module-02-ci-cd-oidc/03-github-actions-variables.md)
-4. [04 — Workflow YAML](runbook/module-02-ci-cd-oidc/04-workflow-yaml.md)
-5. [05 — Successful Plan Run](runbook/module-02-ci-cd-oidc/05-successful-plan-run.md)
-6. [06 — Learnings and Pitfalls](runbook/module-02-ci-cd-oidc/06-learnings-and-pitfalls.md)
+### Module 02 — GitHub Actions CI/CD with OIDC
+
+Runbook steps:
+
+1. [00 — App Registration and Federation](runbook/module-02-ci-cd-oidc/00-app-registration-and-federation.md)
+2. [01 — RBAC Minimal Scope](runbook/module-02-ci-cd-oidc/01-rbac-minimal-scope.md)
+3. [02 — GitHub Actions Variables](runbook/module-02-ci-cd-oidc/02-github-actions-variables.md)
+4. [03 — Workflow YAML](runbook/module-02-ci-cd-oidc/03-workflow-yaml.md)
+5. [04 — Successful Plan Run](runbook/module-02-ci-cd-oidc/04-successful-plan-run.md)
+6. [05 — Learnings and Pitfalls](runbook/module-02-ci-cd-oidc/05-learnings-and-pitfalls.md)
 
 Proofs:
 
