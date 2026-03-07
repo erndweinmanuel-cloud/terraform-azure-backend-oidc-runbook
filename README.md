@@ -129,12 +129,12 @@ runbook/
     04-locking-test.md
 
   module-02-ci-cd-oidc/
-    01-app-registration-and-federation.md
-    02-rbac-minimal-scope.md
-    03-github-actions-variables.md
-    04-workflow-yaml.md
-    05-successful-plan-run.md
-    06-learnings-and-pitfalls.md
+    00-app-registration-and-federation.md
+    01-rbac-minimal-scope.md
+    02-github-actions-variables.md
+    03-workflow-yaml.md
+    04-successful-plan-run.md
+    05-learnings-and-pitfalls.md
 
 proofs/
   remote-state/
@@ -188,7 +188,7 @@ During implementation, several real-world issues occurred and were resolved:
 
 These issues are documented in:
 
-- [Module 02 — Learnings and Pitfalls](runbook/module-02-ci-cd-oidc/06-learnings-and-pitfalls.md)
+- [Module 02 — Learnings and Pitfalls](runbook/module-02-ci-cd-oidc/05-learnings-and-pitfalls.md)
 
 ---
 
