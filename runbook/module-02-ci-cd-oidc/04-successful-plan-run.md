@@ -160,10 +160,10 @@ Recommended screenshots for this step:
 
 Suggested files:
 
-- proofs/cicd/v1.2-oidc-pipeline/06_github_actions_terraform_plan_success.png
-- proofs/cicd/v1.2-oidc-pipeline/07_github_actions_terraform_plan_output.png
-- proofs/cicd/v1.2-oidc-pipeline/08_github_actions_oidc_login_success.png
-- proofs/cicd/v1.2-oidc-pipeline/09_github_actions_workflow_success_overview.png
+- [06_github_actions_terraform_plan_success.png](../../proofs/cicd/v1.2-oidc-pipeline/06_github_actions_terraform_plan_success.png)
+- [07_github_actions_terraform_plan_output.png](../../proofs/cicd/v1.2-oidc-pipeline/07_github_actions_terraform_plan_output.png)
+- [08_github_actions_oidc_login_success.png](../../proofs/cicd/v1.2-oidc-pipeline/08_github_actions_oidc_login_success.png)
+- [09_github_actions_workflow_success_overview.png](../../proofs/cicd/v1.2-oidc-pipeline/09_github_actions_workflow_success_overview.png)
 
 ---
 

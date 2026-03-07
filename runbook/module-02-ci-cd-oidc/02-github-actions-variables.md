@@ -161,7 +161,7 @@ Recommended screenshots for this step:
 
 Suggested files:
 
-- proofs/cicd/v1.2-oidc-pipeline/10_github_actions_repository_variables.png
+- [10_github_actions_repository_variables.png](../../proofs/cicd/v1.2-oidc-pipeline/10_github_actions_repository_variables.png)
 
 If you do not want to expose full values publicly, redact them before committing screenshots.
 

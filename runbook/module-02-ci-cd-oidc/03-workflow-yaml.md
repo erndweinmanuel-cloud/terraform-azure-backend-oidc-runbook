@@ -275,7 +275,7 @@ Recommended screenshots for this step:
 
 Suggested files:
 
-- proofs/cicd/v1.2-oidc-pipeline/09_github_actions_workflow_success_overview.png
+- [09_github_actions_workflow_success_overview.png](../../proofs/cicd/v1.2-oidc-pipeline/09_github_actions_workflow_success_overview.png)
 
 Optional additional screenshot:
 

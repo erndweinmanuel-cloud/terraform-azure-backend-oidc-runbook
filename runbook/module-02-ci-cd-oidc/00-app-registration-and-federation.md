@@ -143,9 +143,9 @@ Recommended screenshots for this step:
 
 Suggested files:
 
-- proofs/cicd/v1.2-oidc-pipeline/00_app-registration_overview.png
-- proofs/cicd/v1.2-oidc-pipeline/02_service-principal_created.png
-- proofs/cicd/v1.2-oidc-pipeline/05_federated_credential_github.png
+- [00_app-registration_overview.png](../../proofs/cicd/v1.2-oidc-pipeline/00_app-registration_overview.png)
+- [02_service-principal_created.png](../../proofs/cicd/v1.2-oidc-pipeline/02_service-principal_created.png)
+- [05_federated_credential_github.png](../../proofs/cicd/v1.2-oidc-pipeline/05_federated_credential_github.png)
 
 ---
 

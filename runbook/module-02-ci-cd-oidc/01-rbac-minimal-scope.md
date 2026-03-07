@@ -184,9 +184,8 @@ az role assignment list `
 
   Suggested files:
 
-  - proofs/cicd/v1.2-oidc-pipeline/03_rbac_contributor_workload_rg.png
-
-  - proofs/cicd/v1.2-oidc-pipeline/04_rbac_storage_blobdatacontributor.png
+- [03_rbac_contributor_workload_rg.png](../../proofs/cicd/v1.2-oidc-pipeline/03_rbac_contributor_workload_rg.png)
+- [04_rbac_storage_blobdatacontributor.png](../../proofs/cicd/v1.2-oidc-pipeline/04_rbac_storage_blobdatacontributor.png)
 
   ---
 
